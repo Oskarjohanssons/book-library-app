@@ -1,0 +1,66 @@
+.search-book-container {
+    max-width: 600px; /* Maxbredd */
+    margin: 0 auto; /* Centrera */
+    padding: 20px; /* Padding */
+    background-color: #f9f9f9; /* Ljus bakgrund */
+    border-radius: 8px; /* Rundade hörn */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Skugga */
+}
+
+input {
+    width: calc(100% - 120px); /* Full bredd minus utrymme för knappen */
+    padding: 10px; /* Inre padding */
+    border: 1px solid #ccc; /* Ljusgrå kant */
+    border-radius: 4px; /* Rundade hörn */
+    box-sizing: border-box; /* Ta hänsyn till padding och kant */
+}
+
+button {
+    padding: 10px; /* Inre padding */
+    background-color: #4a90e2; /* Blå bakgrund */
+    color: white; /* Vit textfärg */
+    border: none; /* Ingen kant */
+    border-radius: 4px; /* Rundade hörn */
+    cursor: pointer; /* Visar att den är klickbar */
+}
+
+button:hover {
+    background-color: #357ab8; /* Mörkare blå vid hovring */
+}
+/* Försäkra att boklistan får ordentligt med utrymme och struktur */
+.book-list {
+    margin-top: 20px;
+    display: grid; /* Använd grid-layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexibla kolumner */
+    gap: 20px; /* Utrymme mellan böckerna */
+}
+
+.book-item {
+    background-color: #ffffff; /* Vit bakgrund för varje bokkort */
+    padding: 15px; /* Lämplig inre padding */
+    border-radius: 8px; /* Rundade hörn */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga för att separera visuellt */
+    transition: transform 0.3s ease-in-out; /* Animering för hover-effekt */
+}
+
+.book-item:hover {
+    transform: scale(1.03); /* Lätt förstoring vid hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Större skugga vid hover */
+}
+
+.book-item h3 {
+    font-size: 1.4em; /* Lite större rubrik för tydlighet */
+    color: #333; /* Mörkare textfärg */
+    margin-bottom: 10px; /* Avstånd under rubriken */
+}
+
+.book-item p {
+    font-size: 1.1em; /* Lämplig storlek för text */
+    color: #666; /* Gråaktig färg för att kontrastera mot rubrik */
+    margin: 5px 0; /* Litet utrymme mellan textstycken */
+}
+
+
+
+
+

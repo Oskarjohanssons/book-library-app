@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import BookList from './components/BookList';
+import BookForm from './components/BookForm';
+import UpdateBook from './components/UpdateBook';
+import DeleteBook from './components/DeleteBook';
+import SearchBook from './components/SearchBook';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav className="navbar">
+        <ul className="navbar-list">
+          <li className="navbar-item">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/add-book">Add Book</Link>
+          </li>
+          <li className="navbar-item">
+            <Link to="/search-book">Search Books</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<BookList />} />
+          <Route path="/add-book" element={<BookForm />} />
+          <Route path="/update-book/:id" element={<UpdateBook />} />
+          <Route path="/delete-book/:id" element={<DeleteBook />} />
+          <Route path="/search-book" element={<SearchBook />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
+
+
+
+
